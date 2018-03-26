@@ -1,7 +1,7 @@
 
 #from pygame import mixer
 import time
-import vlc
+#import vlc
 import json
 import urllib.request
 import subprocess
