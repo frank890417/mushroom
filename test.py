@@ -21,6 +21,6 @@ while True:
     urllib.request.urlretrieve ("http://192.168.8.200/audiodeliver/"+data[-1]['file'],data[-1]['file'].split("/")[-1])
 
     #print(data)
-    subprocess.call(["omxplayer", "/audio/"+data[-1]['file'].split("/")[-1])
+    subprocess.call(["omxplayer", "/audio/"+data[-1]['file'].split("/")[-1] ])
 
     time.sleep(6)
