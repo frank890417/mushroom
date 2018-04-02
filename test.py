@@ -18,7 +18,7 @@ while True:
     data = json.loads(pw.decode("utf-8") )
     print(data[-1])
 
-    urllib.request.urlretrieve ("http://192.168.8.200/audiodeliver"+data[-1]['file'],"/audio/"+data[-1]['file'].split("/")[-1])
+    urllib.request.urlretrieve ("http://192.168.8.200/audiodeliver"+data[-1]['file'],"./audio/"+data[-1]['file'].split("/")[-1])
 
     #print(data)
     subprocess.call(["omxplayer", "/audio/"+data[-1]['file'].split("/")[-1] ])
