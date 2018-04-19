@@ -5,7 +5,7 @@ import urllib.request
 import subprocess
 from subprocess import Popen
 import urllib
-
+import random
 while True:
     print("Check Audio")
     domain = "https://techart.nthu.edu.tw/THE2018/"
