@@ -17,7 +17,10 @@ while True:
     data = json.loads(pw.decode("utf-8") )
 
     aid = -(int(random.random()*3)+1)
+    aif = -1
     print(data[aid])
+
+
 
 
     filename = "./audio/"+data[aid]['file'].split("/   ")[-1]
