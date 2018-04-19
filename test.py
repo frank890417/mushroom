@@ -6,6 +6,8 @@ import subprocess
 from subprocess import Popen
 import urllib
 import random
+import os.path
+
 while True:
     print("Check Audio")
     domain = "https://techart.nthu.edu.tw/THE2018/"
@@ -14,9 +16,13 @@ while True:
     pw = wp.read()
     data = json.loads(pw.decode("utf-8") )
 
-    aid = -(int(random.random()*5)+1)
+    aid = -(int(random.random()*3)+1)
     print(data[aid])
-    urllib.request.urlretrieve(domain+"audiodeliver"+data[aid]['file'],"./audio/"+data[aid]['file'].split("/")[-1])
-    subprocess.call(["omxplayer", "./audio/"+data[aid]['file'].split("/")[-1] ])
+
+
+    filename = "./audio/"+data[aid]['file'].split("/   ")[-1]
+    if (!os.path.isfile):
+        urllib.request.urlretrieve(domain+"audiodeliver"+data[aid]['file'],filename)
+        subprocess.call(["omxplayer", filename)
 
     time.sleep(6)
