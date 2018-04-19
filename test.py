@@ -21,9 +21,9 @@ while True:
 
 
     filename = "./audio/"+data[aid]['file'].split("/   ")[-1]
-    if os.path.isfile(filename)==False:
+    #if os.path.isfile(filename)==False:
 
-        urllib.request.urlretrieve(domain+"audiodeliver"+data[aid]['file'],filename)
+    urllib.request.urlretrieve(domain+"audiodeliver"+data[aid]['file'],filename)
     subprocess.call(["omxplayer", filename])
 
     time.sleep(6)
