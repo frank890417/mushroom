@@ -14,8 +14,9 @@ while True:
     pw = wp.read()
     data = json.loads(pw.decode("utf-8") )
 
-    print(data[-1])
-    urllib.request.urlretrieve(domain+"audiodeliver"+data[-1]['file'],"./audio/"+data[-1]['file'].split("/")[-1])
-    subprocess.call(["omxplayer", "./audio/"+data[-1]['file'].split("/")[-1] ])
+    aid = -(int(random.random()*5)+1)
+    print(data[aid])
+    urllib.request.urlretrieve(domain+"audiodeliver"+data[aid]['file'],"./audio/"+data[aid]['file'].split("/")[-1])
+    subprocess.call(["omxplayer", "./audio/"+data[aid]['file'].split("/")[-1] ])
 
     time.sleep(6)
