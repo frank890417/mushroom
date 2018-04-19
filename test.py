@@ -23,7 +23,7 @@ while True:
 
 
 
-    filename = "./audio/"+data[aid]['file'].split("/   ")[-1]
+    filename = "./audio"+data[aid]['file'].split("/   ")[-1]
     #if os.path.isfile(filename)==False:
 
     urllib.request.urlretrieve(domain+"audiodeliver"+data[aid]['file'],filename)
