@@ -10,7 +10,7 @@ import os.path
 
 while True:
     print("Check Audio")
-    domain = "https://awiclass.monoame.com/audiodeliver/"
+    domain = "https://awiclass.monoame.com/"
     url = domain+"audiodeliver/get_music.php"
     wp = urllib.request.urlopen(url)
     pw = wp.read()
