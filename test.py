@@ -27,7 +27,7 @@ while True:
     #if os.path.isfile(filename)==False:
 
         urllib.request.urlretrieve(domain+"audiodeliver"+data[aid]['file'],filename)
-        subprocess.call(["omxplayer","--vol 800 "+filename])
+        subprocess.call(["omxplayer","--vol",800,filename])
 
     except:
         print("error")
