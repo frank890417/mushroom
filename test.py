@@ -21,7 +21,7 @@ while True:
     print(data[aid])
 
 
-    filename = "./audio"+data[aid]['file'].split("/")[-1]
+    filename = "./audio/"+data[aid]['file'].split("/")[-1]
     #downloadname = "./audio"+data[aid]['file'].split("/")[-1]
     #if os.path.isfile(filename)==False:
 
