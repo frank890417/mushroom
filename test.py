@@ -10,22 +10,26 @@ import os.path
 
 while True:
     print("Check Audio")
-    domain = "https://awiclass.monoame.com/"
-    url = domain+"audiodeliver/get_music.php"
-    wp = urllib.request.urlopen(url)
-    pw = wp.read()
-    data = json.loads(pw.decode("utf-8") )
+    try:
+        domain = "https://awiclass.monoame.com/"
+        url = domain+"audiodeliver/get_music.php"
+        wp = urllib.request.urlopen(url)
+        pw = wp.read()
+        data = json.loads(pw.decode("utf-8") )
 
     #aid = -(int(random.random()*3)+1)
-    aid = -1
-    print(data[aid])
+        aid = -1
+        print(data[aid])
 
 
-    filename = "./audio/"+data[aid]['file'].split("/")[-1]
+        filename = "./audio/"+data[aid]['file'].split("/")[-1]
     #downloadname = "./audio"+data[aid]['file'].split("/")[-1]
     #if os.path.isfile(filename)==False:
 
-    urllib.request.urlretrieve(domain+"audiodeliver"+data[aid]['file'],filename)
-    subprocess.call(["omxplayer", filename])
+        urllib.request.urlretrieve(domain+"audiodeliver"+data[aid]['file'],filename)
+        subprocess.call(["omxplayer", filename])
 
-    time.sleep(6)
+    except:
+        print("error")
+
+    time.sleep(10)
