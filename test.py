@@ -17,8 +17,8 @@ while True:
         pw = wp.read()
         data = json.loads(pw.decode("utf-8") )
 
-        #aid = -(int(random.random()*3)+1)
-        aid = -1
+        aid = -(int(random.random()*2)+1)
+        #aid = -1
         print(data[aid])
 
 
