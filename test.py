@@ -28,7 +28,7 @@ while True:
         try:
             urllib.request.urlretrieve(domain+"audiodeliver"+data[aid]['file'],filename)
             subprocess.call(["omxplayer","--vol","800",filename])
-        except Exception,e:
+        except e:
             print e
             continue # continue to next row
 
