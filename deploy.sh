@@ -1,5 +1,5 @@
 git push
-ssh pi@192.168.110.8  "cd mushroom;sudo git pull;"
-ssh pi@192.168.110.98  "cd mushroom;sudo git pull;"
-ssh pi@192.168.110.187  "cd mushroom;sudo git pull;"
-ssh pi@192.168.110.239  "cd mushroom;sudo git pull;"
+ssh pi@192.168.8.102  "cd mushroom;sudo git pull;"
+ssh pi@192.168.8.104  "cd mushroom;sudo git pull;"
+ssh pi@192.168.8.105  "cd mushroom;sudo git pull;"
+ssh pi@192.168.8.106  "cd mushroom;sudo git pull;"
