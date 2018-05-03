@@ -11,7 +11,7 @@ import os.path
 while True:
     print("Check Audio")
     try:
-        domain = "https://awiclass.monoame.com/"
+        domain = "https://techart.cc/"
         url = domain+"audiodeliver/get_music.php"
         wp = urllib.request.urlopen(url)
         pw = wp.read()
