@@ -31,7 +31,10 @@ while True:
         #downloadname = "./audio"+data[aid]['file'].split("/")[-1]
         #if os.path.isfile(filename)==False:
         try:
-            urllib.request.urlretrieve(domain+"audiodeliver"+data[aid]['file'],filename)
+            durl = domain+"audiodeliver"+data[aid]['file']
+            print("Download: "+durl)
+            print("To: "+filename)
+            urllib.request.urlretrieve(durl,filename)
             subprocess.call(["omxplayer","--vol","800",filename])
             print("Play success!\n")
         except Exception as e:
