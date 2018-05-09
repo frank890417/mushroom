@@ -1,3 +1,2 @@
-/home/pi/mushroom
-sudo git pull
-python3 test.py
+cd /home/pi/mushroom
+sudo python3 /home/pi/mushroom/test.py
