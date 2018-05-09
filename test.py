@@ -13,7 +13,7 @@ while True:
 
 
     counter=counter+1
-    if (counter>100):
+    if (counter>50):
         subprocess.call(["sudo","reboot"])
     try:
         domain = "https://techart.cc/"
