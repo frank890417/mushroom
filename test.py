@@ -9,7 +9,8 @@ import random
 import os.path
 counter = 0
 while True:
-    print("Check Audio")
+    print("Check Audio #"+str(counter))
+
 
     counter=counter+1
     if (counter>100):
