@@ -7,9 +7,13 @@ from subprocess import Popen
 import urllib
 import random
 import os.path
-
+counter = 0
 while True:
     print("Check Audio")
+
+    counter=counter+1
+    if (counter>100):
+        subprocess.call(["sudo","reboot"])
     try:
         domain = "https://techart.cc/"
         url = domain+"audiodeliver/get_music.php"
