@@ -22,7 +22,9 @@ while True:
         pw = wp.read()
         data = json.loads(pw.decode("utf-8") )
 
-        aid = -(int(random.random()*4)+1)
+        aid = -(int(random.random()*30)+1)
+        if (random.random()*10>5):
+            aid = -(int(random.random()*4)+1)
         #aid = -1
         print(data[aid])
 
@@ -44,4 +46,4 @@ while True:
     except Exception as e:
         print(str(e))
         continue
-    time.sleep(8)
+    time.sleep(4)
